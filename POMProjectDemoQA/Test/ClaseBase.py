@@ -10,7 +10,7 @@ class ClaseBase():
         # self.driver.implicitly_wait(tiempo)
         time.sleep(tiempo)
 
-    def clickObjeto(self, by,objeto):
+    def click(self, by, objeto):
         #self.listaPasos.append("Se procede a dar click en: " + objeto)
         #self.screenShotApp()
         self.driver.find_element(by, objeto).click()
