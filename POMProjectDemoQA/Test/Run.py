@@ -39,7 +39,7 @@ class Run(unittest.TestCase):
         #POwebTables.addData("Miguel","Ortega", "ma@mail.com","20", "1000", "Bogotá")
 
 
-    '''def tearDownClass(cls):
-        cls.driver.close()
-        cls.driver.quit()
+    '''def tearDownClass(self):
+        self.driver.close()
+        #cls.driver.quit()
         print("Test completed")'''
