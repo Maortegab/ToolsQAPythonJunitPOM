@@ -7,9 +7,6 @@ from POMProjectDemoQA.Test.ClaseBase import *
     def __init__(self,driver):
         self.driver = driver'''
 
-
-
-
 def clickElements(self):
     #Instancia de clase base
     cb = ClaseBase(self)
@@ -17,12 +14,12 @@ def clickElements(self):
     mapsWebTables = MapsObjectWebTables()
 
     cb.tiempoEspera(1)
-    #cb.click(By.XPATH, mapsWebTables.btnElements)
+    #cb.click("xpath", mapsWebTables.btnElements)
     self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnElements).click()
     # driver.get_screenshot_as_file(f".\\Screenshots\\elements_{inspect.stack()[0][3]}.png")
     cb.tiempoEspera(1)
 
-    print("alguna otra mierda adicional")
+
 
     self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnWebTable).click()
     self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnAdd).click()

@@ -1,5 +1,9 @@
+import keyboard
 import time
+
+
 from selenium import webdriver
+
 
 class ClaseBase():
 
@@ -11,13 +15,22 @@ class ClaseBase():
         # self.driver.implicitly_wait(tiempo)
         time.sleep(tiempo)
 
-    def click(self, by, objeto):
+    def click(self, objeto):
         #self.listaPasos.append("Se procede a dar click en: " + objeto)
         #self.screenShotApp()
-        self.driver.find_element(by, objeto).click()
+        #self.driver.find_element(by, objeto).click()
+        self.driver.find_element(objeto).click()
 
         #self.driver.find_element()
         #self.tiempoEspera(1)
+
+    def delete(self, objeto):
+        keyboard.press_and_release('ctrl + a')
+        keyboard.send('delete')
+
+    def submimt(self, objeto):
+
+        keyboard.send('enter')
 
 
     '''def clickObjeto(self):
