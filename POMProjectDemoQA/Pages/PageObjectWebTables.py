@@ -17,11 +17,11 @@ def clickElements(self):
     mapsWebTables = MapsObjectWebTables()
 
     cb.tiempoEspera(1)
-    #cb.click("XPATH", "//*[name()='path' and contains(@d,'M16 132h41')]")
     #cb.click(By.XPATH, mapsWebTables.btnElements)
-    #driver.get_screenshot_as_file(f".\\Screenshots\\elements_{inspect.stack()[0][3]}.png")
-
     self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnElements).click()
+    # driver.get_screenshot_as_file(f".\\Screenshots\\elements_{inspect.stack()[0][3]}.png")
+    cb.tiempoEspera(1)
+
     print("alguna otra mierda adicional")
 
     '''self.driver.find_element(by=By.XPATH, value=MapsWebTables.btnWebTable).click()

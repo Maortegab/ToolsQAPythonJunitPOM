@@ -1,11 +1,8 @@
 from selenium import webdriver
-import time
-import unittest
-#from POMProjectDemoQA.Maps.MapsObjectWebTables import MapsObjectWebTables
-from selenium.webdriver.common import by
 
+import unittest
 from POMProjectDemoQA.Pages import PageObjectWebTables
-from  POMProjectDemoQA.Pages.PageObjectWebTables import  *
+
 
 @property
 def driver(self):
@@ -25,21 +22,12 @@ class Run(unittest.TestCase):
         driver = cls.driver
         driver.get("http://demoqa.com")
 
-    #def test_login_valid(self):
-        #driver = self.driver
-        #driver.get("http://demoqa.com")
-
     def testWebTable(self):
-
-        # crea objeto pageObject
-        #POwebTables = PageObjectWebTables(driver)
-
         #INGRESA AL MENU WEB TABLES
         PageObjectWebTables.clickElements(self)
         #POwebTables.addData("Miguel","Ortega", "ma@mail.com","20", "1000", "Bogotá")
 
-
-    '''def tearDownClass(self):
-        self.driver.close()
-        #cls.driver.quit()
-        print("Test completed")'''
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
