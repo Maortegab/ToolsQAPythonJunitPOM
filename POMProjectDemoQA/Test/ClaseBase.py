@@ -5,6 +5,7 @@ class ClaseBase():
 
     def __init__ (self,driver):
         self.driver: webdriver.Chrome = driver
+        #self.driver.implicitly_wait(20)
 
     def tiempoEspera(self, tiempo):
         # self.driver.implicitly_wait(tiempo)
