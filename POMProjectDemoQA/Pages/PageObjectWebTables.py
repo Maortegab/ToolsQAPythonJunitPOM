@@ -17,32 +17,33 @@ def clickElements(self):
     mapsWebTables = MapsObjectWebTables()
 
     cb.tiempoEspera(1)
-    #cb.click("XPATH", "//*[name()='path' and contains(@d,'M16 132h41')]")
     #cb.click(By.XPATH, mapsWebTables.btnElements)
-    #driver.get_screenshot_as_file(f".\\Screenshots\\elements_{inspect.stack()[0][3]}.png")
-
     self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnElements).click()
+    # driver.get_screenshot_as_file(f".\\Screenshots\\elements_{inspect.stack()[0][3]}.png")
+    cb.tiempoEspera(1)
+
     print("alguna otra mierda adicional")
 
-    '''self.driver.find_element(by=By.XPATH, value=MapsWebTables.btnWebTable).click()
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.btnAdd).click()
-    base.tiempoEspera(self,2)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnWebTable).click()
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnAdd).click()
+    cb.tiempoEspera(1)
 
 def addData(self,fName, lName, email, Age, salary, departament):
-    MapsWebTables = MapsObjectWebTables()
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.txFirstName).send_keys(fName)
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.txtLastName).send_keys(lName)
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.txtEmail).send_keys(email)
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.txtAge).send_keys(Age)
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.txtSalary).send_keys(salary)
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.txtDepartment).send_keys(departament)
+    mapsWebTables = MapsObjectWebTables()
+    cb = ClaseBase(self)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.txFirstName).send_keys(fName)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.txtLastName).send_keys(lName)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.txtEmail).send_keys(email)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.txtAge).send_keys(Age)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.txtSalary).send_keys(salary)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.txtDepartment).send_keys(departament)
 
-    time.sleep(1)
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.btnSubmit).click()
-    time.sleep(1)
+    cb.tiempoEspera(1)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnSubmit).click()
+    cb.tiempoEspera(1)
     #BORRANDO PRIMER REGISTRO
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.btnDelete).click()
-    time.sleep(1)
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnDelete).click()
+    cb.tiempoEspera(1)
     #IR A PAGINA INICIAL
-    self.driver.find_element(by=By.XPATH, value=MapsWebTables.btnHome).click()
-    time.sleep(1)'''
+    self.driver.find_element(by=By.XPATH, value=mapsWebTables.btnHome).click()
+    cb.tiempoEspera(1)

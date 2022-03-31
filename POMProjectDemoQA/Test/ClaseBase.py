@@ -1,10 +1,11 @@
 import time
-
+from selenium import webdriver
 
 class ClaseBase():
 
     def __init__ (self,driver):
-        self.driver = driver
+        self.driver: webdriver.Chrome = driver
+        #self.driver.implicitly_wait(20)
 
     def tiempoEspera(self, tiempo):
         # self.driver.implicitly_wait(tiempo)
@@ -14,7 +15,9 @@ class ClaseBase():
         #self.listaPasos.append("Se procede a dar click en: " + objeto)
         #self.screenShotApp()
         self.driver.find_element(by, objeto).click()
-        self.tiempoEspera(1)
+
+        #self.driver.find_element()
+        #self.tiempoEspera(1)
 
 
     '''def clickObjeto(self):
