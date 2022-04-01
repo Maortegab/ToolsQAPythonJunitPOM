@@ -19,7 +19,6 @@ def addDataDate(self, SDate, dateNTime):
     # Instancia de Maps
     mapsDatePicker = MapsObjectDatePicker()
     self.driver.find_element(by=By.XPATH, value=mapsDatePicker.btnSelectDate).click()
-    #cb.click(self.driver.find_element_by_xpath(mapsDatePicker.btnSelectDate))
     cb.tiempoEspera(1)
     cb.delete(self.driver.find_element(by=By.XPATH, value=mapsDatePicker.btnSelectDate))
     cb.tiempoEspera(1)
@@ -31,7 +30,7 @@ def addDataDate(self, SDate, dateNTime):
     cb.tiempoEspera(1)
     cb.delete(self.driver.find_element(by=By.XPATH, value=mapsDatePicker.txtDateAndTime))
     cb.tiempoEspera(1)
-    self.driver.find_element(by=By.XPATH, value=mapsDatePicker.btnSelectDate).send_keys(dateNTime)
+    self.driver.find_element(by=By.XPATH, value=mapsDatePicker.txtDateAndTime).send_keys(dateNTime)
     self.driver.find_element(by=By.XPATH, value=mapsDatePicker.btnHora).click()
     cb.tiempoEspera(2)
     self.driver.find_element(by=By.XPATH, value=mapsDatePicker.btnHome).click()

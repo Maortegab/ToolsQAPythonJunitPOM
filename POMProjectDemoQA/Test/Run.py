@@ -46,10 +46,10 @@ class Run(unittest.TestCase):
         addDataDate(self,"01/13/2002","January 13, 2002")
 
 
-    '''def testAlert(self):
+    def testAlert(self):
 
-        #clickAlerts(self,"Miguel Ángel")
-        clickAlerts(self)'''
+        clickAlerts(self)
+        #clickAlerts(self)
 
 
     @classmethod
