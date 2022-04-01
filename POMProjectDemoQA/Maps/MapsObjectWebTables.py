@@ -1,5 +1,3 @@
-
-
 class MapsObjectWebTables():
 
     #def __init__(self,driver):
