@@ -2,7 +2,9 @@ from selenium import webdriver
 
 import unittest
 from POMProjectDemoQA.Pages import PageObjectWebTables
+from POMProjectDemoQA.Pages.PageObjectDatePicker import *
 from POMProjectDemoQA.Pages.PageObjectWebTables import *
+from POMProjectDemoQA.Pages.PageObjectAlerts import *
 from POMProjectDemoQA.Test import  ClaseBase
 
 
@@ -35,6 +37,20 @@ class Run(unittest.TestCase):
 
         #INGRESA AL MENU WEB TABLES
         addData(self,"Miguel","Ortega", "ma@mail.com","20", "1000", "Bogotá")
+
+    def testDatePicker(self):
+
+        clickPicker(self)
+
+        #INGRESA AL MENU WEB TABLES
+        addDataDate(self,"01/13/2002","January 13, 2002")
+
+
+    def testAlert(self):
+
+        clickAlerts(self)
+        #clickAlerts(self)
+
 
     @classmethod
     def tearDownClass(cls):
