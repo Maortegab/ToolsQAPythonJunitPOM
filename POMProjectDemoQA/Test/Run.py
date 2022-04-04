@@ -1,24 +1,9 @@
-from selenium import webdriver
-
 import unittest
-from POMProjectDemoQA.Pages import PageObjectWebTables
 from POMProjectDemoQA.Pages.PageObjectDatePicker import *
 from POMProjectDemoQA.Pages.PageObjectWebTables import *
 from POMProjectDemoQA.Pages.PageObjectAlerts import *
-from POMProjectDemoQA.Test import  ClaseBase
-
-
-
 
 class Run(unittest.TestCase):
-
-    '''@property
-    def driver(self):
-        return self._driver
-
-    @driver.setter
-    def driver(self, driver):
-        self._driver = driver'''
 
     @classmethod
     def setUpClass(cls):
@@ -49,7 +34,7 @@ class Run(unittest.TestCase):
     def testAlert(self):
 
         clickAlerts(self)
-        #clickAlerts(self)
+
 
 
     @classmethod

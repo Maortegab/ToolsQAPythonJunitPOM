@@ -1,3 +1,8 @@
+# Comentario de prueba
+# Para visualizacion de cambios
+# En GitHub
+
+
 import keyboard
 import time
 
@@ -38,3 +43,5 @@ class ClaseBase():
         self.screenShotApp()
         #self.driver.find_element(by, objeto).click()
         self.tiempoEspera(1)'''
+
+    ##Hola
